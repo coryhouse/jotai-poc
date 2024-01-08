@@ -7,7 +7,11 @@ type CounterContextType = {
 
 const CounterContext = createContext<CounterContextType | null>(null);
 
-export function CounterProvider({ children }: { children: React.ReactNode }) {
+type CounterProviderProps = {
+  children: React.ReactNode;
+};
+
+export function CounterProvider({ children }: CounterProviderProps) {
   const [count, setCount] = useState(0);
 
   return (
