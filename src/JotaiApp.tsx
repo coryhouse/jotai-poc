@@ -5,7 +5,7 @@ const counterAtom = atom(0);
 
 function Header() {
   const [count] = useAtom(counterAtom);
-  return <div>{count}</div>;
+  return <h2>{count}</h2>;
 }
 
 function CountButton() {
@@ -20,10 +20,9 @@ function CountButton() {
 export default function JotaiApp() {
   return (
     <>
-      <h1>This app uses Jotai.</h1>
+      <h1>Jotai</h1>
       <p>
-        The Header and CountButton components re-render when the count changes,
-        but the app doesn't. 👍
+        Only `Header` and `CountButton` re-render when the count changes. 👍
       </p>
       <Header />
       <div className="card">

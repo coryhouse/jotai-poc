@@ -3,7 +3,7 @@ import { CounterProvider, useCounter } from "./counterContext";
 
 function Header() {
   const { count } = useCounter();
-  return <div>{count}</div>;
+  return <h2>{count}</h2>;
 }
 
 function CountButton() {
@@ -15,10 +15,10 @@ function CountButton() {
   );
 }
 
-export default function ContextApp() {
+export default function ContextGlobalApp() {
   return (
     <CounterProvider>
-      <h1>This app uses Context.</h1>
+      <h1>Global Context</h1>
       <p>Everything re-renders when the count changes 👎</p>
       <Header />
       <div className="card">
