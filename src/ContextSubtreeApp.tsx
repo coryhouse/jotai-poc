@@ -19,7 +19,7 @@ export default function ContextSubtreeApp() {
   return (
     <>
       <h1>Context on a subtree</h1>
-      <p>Only the subtree re-renders when the count changes 👍</p>
+      <p>Only the subtree below re-renders when the count changes 👍</p>
       <CounterProvider>
         <>
           <Header />
